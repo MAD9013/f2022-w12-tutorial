@@ -1,0 +1,55 @@
+$font-scale-sm: 1.25;
+$font-scale-l: 1.333;
+
+@mixin heading1 {
+  font-size: fontScale($font-scale-sm, 5);
+  color: $color__primary;
+  @media only screen and (min-width: 38em) {
+    font-size: fontScale($font-scale-l, 5);
+  }
+}
+
+@mixin heading2 {
+  font-size: fontScale($font-scale-sm, 4);
+  @media only screen and (min-width: 38em) {
+    font-size: fontScale($font-scale-l, 4);
+  }
+}
+
+@mixin heading3 {
+  font-size: fontScale($font-scale-sm, 3);
+  @media only screen and (min-width: 38em) {
+    font-size: fontScale($font-scale-l, 3);
+  }
+}
+
+@mixin heading4 {
+  font-size: fontScale($font-scale-sm, 2);
+  @media only screen and (min-width: 38em) {
+    font-size: fontScale($font-scale-l, 2);
+  }
+}
+
+@mixin hov {
+  &:hover,
+  &:active {
+    @content;
+  }
+}
+
+@mixin grid($xs: 1, $s: 2, $m: 3, $l: 4, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($xs, 1fr);
+  @if $gap {
+    gap: #{$gap}rem;
+  }
+  @media only screen and (min-width: 25em) {
+    grid-template-columns: repeat($s, 1fr);
+  }
+  @media only screen and (min-width: 38em) {
+    grid-template-columns: repeat(l, 1fr);
+  }
+  @media only screen and (min-width: 60em) {
+    grid-template-columns: repeat($l, 1fr);
+  }
+}

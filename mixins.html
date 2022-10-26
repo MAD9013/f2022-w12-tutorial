@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mixins | W12 - Sass</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <ul class="skip-links">
+      <li><a href="#nav">Skip to main navigation</a></li>
+      <li><a href="#main">Skip to content</a></li>
+    </ul>
+
+    <header class="masthead no-print" role="banner">
+      <div class="container">
+        <a href="/" class="logo">
+          <strong>W12 - Sass</strong>
+        </a>
+        <nav id="nav" role="navigation">
+          <ul>
+            <li><a href="./sass-basics.html">Sass Basics</a></li>
+            <li><a href="./nesting.html">Nesting</a></li>
+            <li><a aria-current="page" href="./mixins.html">Mixins</a></li>
+            <li><a href="./extend.html">Extend</a></li>
+          </ul>
+        </nav>
+        <a class="nav-toggle" href="#nav" aria-label="Click to open mobile nav">
+          <span class="tog top"></span>
+          <span class="tog middle"></span>
+          <span class="tog bottom"></span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <section>
+        <div class="container container-side-padding">
+          <h1>Mixins</h1>
+
+          <!-- ---------- TUTORIAL CONTENT ---------- -->
+
+          <div class="text-wrap">
+            <h2>Introduction to Mixins</h2>
+            <p>
+              Mixins help us to create reusable blocks of code that can be
+              applied in a number of situations. They improve efficiency and
+              help insure consistency. Any code written inside of the mixin will
+              be inserted when the mixin is called.
+            </p>
+            <p>A basic mixin:</p>
+            <pre><code>@mixin greenText { <br>  color: green;<br>}</code><br><br><code>h2 { <br>  font-size: 2rem;<br>  @include greenText;<br>}</code><br><br>Output:<br><br><code>h2 { <br>  font-size: 2rem;<br>  color: green;<br>}</code></pre>
+
+            <h2 class="padding-t">Heading Style Mixins</h2>
+
+            <h2 class="heading-1">Heading 1 Mimic</h2>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+          </div>
+
+          <h2 class="padding-t">Mixin Grid</h2>
+
+          <div class="grid-images grid-1">
+            <img
+              class="dog-1"
+              src="https://placedog.net/100/100?random"
+              alt="Dog 1"
+            />
+            <img
+              class="dog-2"
+              src="https://placedog.net/200/200?random"
+              alt="Dog 2"
+            />
+            <img
+              class="dog-3"
+              src="https://placedog.net/300/300?random"
+              alt="Dog 3"
+            />
+            <img
+              class="dog-4"
+              src="https://placedog.net/400/400?random"
+              alt="Dog 4"
+            />
+            <img
+              class="dog-5"
+              src="https://placedog.net/500/500?random"
+              alt="Dog 5"
+            />
+            <img
+              class="dog-6"
+              src="https://placedog.net/600/600?random"
+              alt="Dog 6"
+            />
+            <img
+              class="dog-7"
+              src="https://placedog.net/700/700?random"
+              alt="Dog 7"
+            />
+            <img
+              class="dog-8"
+              src="https://placedog.net/800/800?random"
+              alt="Dog 8"
+            />
+            <img
+              class="dog-9"
+              src="https://placedog.net/900/900?random"
+              alt="Dog 9"
+            />
+            <img
+              class="dog-10"
+              src="https://placedog.net/1000/1000?random"
+              alt="Dog 10"
+            />
+            <img
+              class="dog-11"
+              src="https://placedog.net/1100/1100?random"
+              alt="Dog 11"
+            />
+            <img
+              class="dog-12"
+              src="https://placedog.net/1200/1200?random"
+              alt="Dog 12"
+            />
+            <img
+              class="dog-13"
+              src="https://placedog.net/1300/1300?random"
+              alt="Dog 13"
+            />
+            <img
+              class="dog-14"
+              src="https://placedog.net/1400/1400?random"
+              alt="Dog 14"
+            />
+            <img
+              class="dog-15"
+              src="https://placedog.net/1500/1500?random"
+              alt="Dog 15"
+            />
+          </div>
+
+          <div class="grid-images grid-2">
+            <img
+              class="dog-1"
+              src="https://placedog.net/100/100?random"
+              alt="Dog 1"
+            />
+            <img
+              class="dog-2"
+              src="https://placedog.net/200/200?random"
+              alt="Dog 2"
+            />
+            <img
+              class="dog-3"
+              src="https://placedog.net/300/300?random"
+              alt="Dog 3"
+            />
+            <img
+              class="dog-4"
+              src="https://placedog.net/400/400?random"
+              alt="Dog 4"
+            />
+            <img
+              class="dog-5"
+              src="https://placedog.net/500/500?random"
+              alt="Dog 5"
+            />
+            <img
+              class="dog-6"
+              src="https://placedog.net/600/600?random"
+              alt="Dog 6"
+            />
+            <img
+              class="dog-7"
+              src="https://placedog.net/700/700?random"
+              alt="Dog 7"
+            />
+            <img
+              class="dog-8"
+              src="https://placedog.net/800/800?random"
+              alt="Dog 8"
+            />
+            <img
+              class="dog-9"
+              src="https://placedog.net/900/900?random"
+              alt="Dog 9"
+            />
+            <img
+              class="dog-10"
+              src="https://placedog.net/1000/1000?random"
+              alt="Dog 10"
+            />
+            <img
+              class="dog-11"
+              src="https://placedog.net/1100/1100?random"
+              alt="Dog 11"
+            />
+            <img
+              class="dog-12"
+              src="https://placedog.net/1200/1200?random"
+              alt="Dog 12"
+            />
+            <img
+              class="dog-13"
+              src="https://placedog.net/1300/1300?random"
+              alt="Dog 13"
+            />
+            <img
+              class="dog-14"
+              src="https://placedog.net/1400/1400?random"
+              alt="Dog 14"
+            />
+            <img
+              class="dog-15"
+              src="https://placedog.net/1500/1500?random"
+              alt="Dog 15"
+            />
+          </div>
+
+          <!-- ---------- END TUTORIAL CONTENT ---------- -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p>
+          <a
+            href="https://mad9013.github.io/F2021/modules/week11/"
+            target="_blank"
+            >Week 11 Content</a
+          >
+        </p>
+        <small
+          >Created for
+          <a href="https://mad9013.github.io/F2021/">MAD9013 course</a> and free
+          for any use.</small
+        >
+        <a class="to-top" href="#top">To top</a>
+      </div>
+    </footer>
+    <div class="click-to-close"></div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

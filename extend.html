@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nesting | W12 - Sass</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <ul class="skip-links">
+      <li><a href="#nav">Skip to main navigation</a></li>
+      <li><a href="#main">Skip to content</a></li>
+    </ul>
+
+    <header class="masthead no-print" role="banner">
+      <div class="container">
+        <a href="/" class="logo">
+          <strong>W12 - Sass</strong>
+        </a>
+        <nav id="nav" role="navigation">
+          <ul>
+            <li><a href="./sass-basics.html">Sass Basics</a></li>
+            <li><a href="./nesting.html">Nesting</a></li>
+            <li><a href="./mixins.html">Mixins</a></li>
+            <li><a aria-current="page" href="./extend.html">Extend</a></li>
+          </ul>
+        </nav>
+        <a class="nav-toggle" href="#nav" aria-label="Click to open mobile nav">
+          <span class="tog top"></span>
+          <span class="tog middle"></span>
+          <span class="tog bottom"></span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <section>
+        <div class="container container-side-padding">
+          <h1>Extend</h1>
+
+          <!-- ---------- TUTORIAL CONTENT ---------- -->
+
+          <div class="text-wrap">
+            <h2>Introduction to Extend</h2>
+            <p>
+              <code>@extend</code> is another way to reuse code is Sass. It
+              essentially will take the styling of another element and clone it
+              to a new element. It is great for creating multiple slight
+              variations of a single style.
+            </p>
+            <p>
+              Not sure whether to use <code>@extend</code> or
+              <code>@mixin</code>? Check out the
+              <a
+                href="https://sass-lang.com/documentation/at-rules/extend#extends-or-mixins"
+                >Sass documentation</a
+              >.
+            </p>
+
+            <h2>Button Clones</h2>
+            <a class="button" href="#">Base</a>
+            <a class="button--alert" href="#">Alert</a>
+            <a class="button--error" href="#">Error</a>
+            <a class="button--outline" href="#">Outline</a>
+
+            <h2 class="padding-t">Cards</h2>
+            <a class="card-icon" href="#">
+              <img
+                class="card-icon__img"
+                src="https://placedog.net/550/550?random"
+                alt="A random dog!"
+              />
+              <h3 class="card-icon__title">Card Title</h3>
+              <p class="card-icon__text">Lorem ipsum sit dolar imet.</p>
+              <i class="card-icon__icon icon">
+                <svg>
+                  <use xlink:href="./images/icons.svg#right-indicator" />
+                </svg>
+              </i>
+            </a>
+
+            <a class="card-image" href="#">
+              <img
+                class="card-image__img"
+                src="https://placedog.net/650/650?random"
+                alt="A random dog!"
+              />
+              <div class="card-image__content">
+                <h3 class="card-image__title">Card Title</h3>
+                <p class="card-image__text">Lorem ipsum sit dolar imet.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- ---------- END TUTORIAL CONTENT ---------- -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p>
+          <a
+            href="https://mad9013.github.io/F2021/modules/week11/"
+            target="_blank"
+            >Week 11 Content</a
+          >
+        </p>
+        <small
+          >Created for
+          <a href="https://mad9013.github.io/F2021/">MAD9013 course</a> and free
+          for any use.</small
+        >
+        <a class="to-top" href="#top">To top</a>
+      </div>
+    </footer>
+    <div class="click-to-close"></div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

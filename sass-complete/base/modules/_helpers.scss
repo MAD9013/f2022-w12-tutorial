@@ -1,0 +1,105 @@
+.box-simple {
+  border: 0.1875rem solid $color__primary;
+  background-color: $color__primary-pale;
+  border-radius: .5rem;
+  padding: 1rem;
+  text-align: center;
+  margin: 0 0 1rem;
+
+  &:nth-of-type(2) {
+    border-color: $color__accent-1;
+    background-color: $color__accent-1--light;
+  }
+  &:nth-of-type(3) {
+    border-color: $color__accent-2;
+    background-color: $color__accent-2--light;
+  }
+  &:nth-of-type(4) {
+    border-color: $color__accent-3;
+    background-color: $color__accent-3--light;
+  }
+  &:nth-of-type(5) {
+    border-color: $color__accent-4;
+    background-color: $color__accent-4--light;
+  }
+  &:nth-of-type(6) {
+    border-color: $color__accent-5;
+    background-color: $color__accent-5--light;
+  }
+  &:nth-of-type(7) {
+    border-color: $color__accent-6;
+    background-color: $color__accent-6--light;
+  }
+  &:nth-of-type(8) {
+    border-color: $color__accent-7;
+    background-color: $color__accent-7--light;
+  }
+  &:nth-of-type(9) {
+    border-color: $color__accent-8;
+    background-color: $color__accent-8--light;
+  }
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.flex-transition .box-simple,
+.grid-transition .box-simple {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin: 0 1rem 0 0;
+  }
+
+}
+
+/* A nice highlight for when I dropped in code samples */
+
+code, pre {
+  background-color: #00000022;
+  border: 0.0625rem solid #00000044;
+  padding: .25rem;
+  border-radius: .25rem;
+
+  code {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+pre {
+  padding: 1rem;
+  margin: 0 auto 1rem;
+  width: max(15rem, 80%);
+}
+
+/* Card Grids on Nesting page */
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @media only screen and (min-width: 38em) {
+  
+    grid-template-columns: repeat(2, 1fr);
+  
+  }
+
+  @media only screen and (min-width: 60em) {
+  
+    grid-template-columns: repeat(3, 1fr);
+  
+  }
+
+  .col {
+    display: flex;
+
+  }
+
+}

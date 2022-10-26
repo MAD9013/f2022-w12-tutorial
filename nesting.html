@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nesting | W12 - Sass</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <ul class="skip-links">
+      <li><a href="#nav">Skip to main navigation</a></li>
+      <li><a href="#main">Skip to content</a></li>
+    </ul>
+
+    <header class="masthead no-print" role="banner">
+      <div class="container">
+        <a href="/" class="logo">
+          <strong>W12 - Sass</strong>
+        </a>
+        <nav id="nav" role="navigation">
+          <ul>
+            <li><a href="./sass-basics.html">Sass Basics</a></li>
+            <li><a aria-current="page" href="./nesting.html">Nesting</a></li>
+            <li><a href="./mixins.html">Mixins</a></li>
+            <li><a href="./extend.html">Extend</a></li>
+          </ul>
+        </nav>
+        <a class="nav-toggle" href="#nav" aria-label="Click to open mobile nav">
+          <span class="tog top"></span>
+          <span class="tog middle"></span>
+          <span class="tog bottom"></span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <!-- ---------- TUTORIAL CONTENT ---------- -->
+
+      <header class="hero">
+        <div class="hero__content">
+          <h1>Nesting</h1>
+          <p>
+            Using nesting in Sass allows us to organize our styles and reduce
+            repetitive writing.
+          </p>
+        </div>
+      </header>
+
+      <section>
+        <div class="container container-side-padding">
+          <ul class="grid-cards">
+            <li class="col">
+              <a class="card" href="#">
+                <img
+                  class="card__img"
+                  src="https://placedog.net/550/550?random"
+                  alt="A random dog!"
+                />
+                <h3 class="card__title">Card Title</h3>
+                <p class="card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <span class="btn">Learn More</span>
+              </a>
+            </li>
+            <li class="col">
+              <a class="card" href="#">
+                <img
+                  class="card__img"
+                  src="https://placedog.net/500/500?random"
+                  alt="A random dog!"
+                />
+                <h3 class="card__title">Card Title</h3>
+                <p class="card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <span class="btn">Learn More</span>
+              </a>
+            </li>
+            <li class="col">
+              <a class="card" href="#">
+                <img
+                  class="card__img"
+                  src="https://placedog.net/600/600?random"
+                  alt="A random dog!"
+                />
+                <h3 class="card__title">Card Title</h3>
+                <p class="card__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <span class="btn">Learn More</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- ---------- END TUTORIAL CONTENT ---------- -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p>
+          <a
+            href="https://mad9013.github.io/F2021/modules/week11/"
+            target="_blank"
+            >Week 11 Content</a
+          >
+        </p>
+        <small
+          >Created for
+          <a href="https://mad9013.github.io/F2021/">MAD9013 course</a> and free
+          for any use.</small
+        >
+        <a class="to-top" href="#top">To top</a>
+      </div>
+    </footer>
+    <div class="click-to-close"></div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

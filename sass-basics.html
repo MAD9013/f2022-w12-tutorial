@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass Basics | W12 - Sass</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <ul class="skip-links">
+      <li><a href="#nav">Skip to main navigation</a></li>
+      <li><a href="#main">Skip to content</a></li>
+    </ul>
+
+    <header class="masthead no-print" role="banner">
+      <div class="container">
+        <a href="/" class="logo">
+          <strong>W12 - Sass</strong>
+        </a>
+        <nav id="nav" role="navigation">
+          <ul>
+            <li>
+              <a aria-current="page" href="./sass-basics.html">Sass Basics</a>
+            </li>
+            <li><a href="./nesting.html">Nesting</a></li>
+            <li><a href="./mixins.html">Mixins</a></li>
+            <li><a href="./extend.html">Extend</a></li>
+          </ul>
+        </nav>
+        <a class="nav-toggle" href="#nav" aria-label="Click to open mobile nav">
+          <span class="tog top"></span>
+          <span class="tog middle"></span>
+          <span class="tog bottom"></span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <section>
+        <div class="container container-side-padding">
+          <h1>Sass Basics</h1>
+
+          <!-- ---------- TUTORIAL CONTENT ---------- -->
+
+          <div class="text-wrap">
+            <h2>Introduction to Sass</h2>
+            <p>
+              <a href="https://sass-lang.com/">Sass</a> is a CSS pre-processor
+              that allows us to write code more quickly and efficiently through
+              improved organization, functionality, and code reusability.
+            </p>
+
+            <h3>Basic Commands</h3>
+            <h4>Single File Compile</h4>
+            <code class="push inline-block"
+              >sass ./sass/main.scss ./css/main.css</code
+            >
+            <p>
+              This will reference a single file and then will compile it into
+              another referenced file. The first file reference is the source
+              and the second referenced file is the destination.
+            </p>
+            <code class="push inline-block"
+              >sass ./{folder}/{entry-file}
+              ./{output-folder}/{output-file}</code
+            >
+
+            <h4>Watched Folder Compile</h4>
+            <code class="push inline-block">sass --watch ./sass:./css</code>
+            <p>
+              By using <code>sass ./sass:./css</code> we instead reference the
+              entire folder and then compile the contents to a new folder.
+              Adding a <code>--watch</code> flag will continue to run the Sass
+              command and will recompile any time an altered file is saved. You
+              can then end the watch command with <code>control + c</code>
+            </p>
+            <code class="push inline-block"
+              >sass --watch ./{watched-folder}:./{output-folder}</code
+            >
+
+            <h4>Compiled Style</h4>
+            <code class="push inline-block"
+              >sass --watch ./sass:./css --style compressed</code
+            >
+            <p>
+              We can modify the output by adding a <code>--style</code> flag. By
+              default it will be <code>expanded</code>, which outputs easily
+              readable CSS. If you put <code>--style compressed</code> it will
+              compress the CSS down to one line. This should be used for final
+              live version of your site to help reduce file size
+            </p>
+          </div>
+
+          <!-- ---------- END TUTORIAL CONTENT ---------- -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p>
+          <a
+            href="https://mad9013.github.io/F2021/modules/week11/"
+            target="_blank"
+            >Week 11 Content</a
+          >
+        </p>
+        <small
+          >Created for
+          <a href="https://mad9013.github.io/F2021/">MAD9013 course</a> and free
+          for any use.</small
+        >
+        <a class="to-top" href="#top">To top</a>
+      </div>
+    </footer>
+    <div class="click-to-close"></div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

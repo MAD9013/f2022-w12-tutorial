@@ -1,0 +1,73 @@
+/* 
+I like to create a collection of reusable classes that help me create consistent layout and spacing on my webpages.
+*/
+
+main {
+  min-height: calc(100vh - 120.125rem); /* This will expand the size of <main> to push the footer to the bottom on pages with little content */
+  padding-top: 60.1875rem; /* This padding compensates for the fixed navbar not taking up any space to avoid overlap */
+}
+
+.container {
+  max-width: 70em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section > .container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.container-side-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.padding-t {
+  padding-top: 6rem;
+}
+
+.padding-t-3 {
+  padding-top: 3rem;
+}
+
+.spacing-b {
+  padding-bottom: 6rem;
+}
+
+.push {
+  margin-bottom: 1rem;
+}
+
+.push-4 {
+  margin-bottom: 4rem;
+}
+
+.text-wrap {
+  max-width: 45em;
+}
+
+.parent-styles {
+  border: 0.25rem dashed #ccc;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 1rem;
+
+  @media only screen and (min-width: 38em) {
+
+    grid-template-columns: repeat(3, 1fr);
+  
+  }
+
+}
+

@@ -1,0 +1,10 @@
+Basic Compile ----- 
+sass ./sass/main.scss ./css/main.css 
+sass ./{folder}/{entry-file} ./{output-folder}/{output-file}
+
+Watch -----
+sass --watch ./sass:./css
+sass --watch ./{watched-folder}:./{output-folder}
+
+Watch Compressed -----
+sass --watch ./sass:./css --style compressed

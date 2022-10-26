@@ -1,0 +1,16 @@
+.heading-1 {
+  @include heading1;
+  border: 0;
+}
+
+.grid-images img {
+    width: 100%;
+}
+
+.grid-1 {
+  @include grid($l: 6);
+}
+
+.grid-2 {
+  @include grid(2, 1, 4, 3, 2);
+}
